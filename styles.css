@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#311847),
+    to(#3eb9d6)
+  );
+  background-image: -webkit-linear-gradient(top, #311847, #3eb9e6);
+  background-image: -moz-linear-gradient(top, #311847, #3eb9d6);
+  background-image: linear-gradient(to bottom, #311847, #3eb9e6);
+}
+.weather-box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: "Abel", sans-serif;
+  animation-name: introduction;
+  animation-duration: 5s;
+}
+
+/* the effect of appearing slowly on the screen */
+@keyframes introduction {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.row1 {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid white;
+  padding-bottom: 30px;
+}
+.weather-location {
+  color: white;
+  font-size: 50px;
+}
+.row2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.row2:hover .temperature {
+  color: #41a5cf;
+}
+.row2:hover .temperature-type {
+  color: white;
+}
+.temperature {
+  color: white;
+  font-size: 88px;
+  cursor: pointer;
+  pointer-events: auto;
+  margin-right: 10px;
+  letter-spacing: 10px;
+  transition: color 1s;
+}
+.temperature-type {
+  padding-top: 30px;
+  font-size: 40px;
+}
+.row3 {
+  margin-top: 50px;
+}
+.weather-description {
+  color: white;
+  font-size: 25px;
+}
